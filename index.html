@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VUE EMAIL LIST</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+</head>
+<body>
+    <div id="container">
+        <button @click="getEmailsList()">Stampa indirizzi Email</button>
+        <ul v-if="emailsList.length === listLength">
+            <li v-for="email in emailsList">{{ email }}</li>
+        </ul>
+
+        <p v-else-if="emailsList.length > 0">Caricamento in corso...</p>
+    </div>
+    <!--v-if e v-else-if aggiunti per la parte BONUS dell'esercizio-->
+    <script src="script/app.js"></script>
+</body>
+</html>
